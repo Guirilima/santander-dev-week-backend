@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.guirilima</groupId>
 	<artifactId>santander-dev-week-backend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>santander-dev-week-backend</name>
 	<description>A project created during Santander Dev Week</description>
 	<properties>
@@ -27,6 +27,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.20</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
