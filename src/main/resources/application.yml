@@ -1,23 +1,7 @@
+spring:
+  profiles:
+    active: production
+
 server:
-  port: 8080
   servlet:
     context-path: /bootcamp
-
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/dt_santander
-    username: root
-    password: root123
-  jpa:
-    show-sql: true
-    generate-ddl: true
-    hibernate:
-      ddl-auto: update
-
-project:
-  version: @project.version@
-  name: @project.name@
-
-#@Value("${project.version}")
-#private String projectVersion;

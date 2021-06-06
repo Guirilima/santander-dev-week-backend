@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL}
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+project:
+  version: @project.version@
+  name: @project.name@
+
+#@Value("${project.version}")
+#private String projectVersion;
