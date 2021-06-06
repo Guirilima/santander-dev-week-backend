@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 
 import org.springframework.transaction.annotation.Transactional;
+
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -76,7 +78,7 @@ public class StockService {
 
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
     public List<StockDTO> findByCurrentDate() {
-        return stockRepository.findByCurrentDate()
+        return stockRepository.findByCurrentDate(LocalDate.now())
                 .map(stockMapper::toDto)
                 .orElseThrow(NotFoundException::new);
     }
