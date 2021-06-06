@@ -2,3 +2,10 @@ server:
   port: 8080
   servlet:
     context-path: /bootcamp
+
+project:
+  version: @project.version@
+  name: @project.name@
+
+#@Value("${project.version}")
+#private String projectVersion;
