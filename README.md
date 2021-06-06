@@ -1,12 +1,15 @@
 # SANTANDER DEV WEEK - BACK-END
 #### Tecnologia: Java - Spring [Boot,Data] - Maven - MySQL - OpenAPI - Lombok
 
-![Image](https://hermes.digitalinnovation.one/tracks/cover/9618271f-9dd2-4f70-b728-1f627b2a92ab.png "Image Santander Dev Week")
+
+![Image](src/main/resources/static/image-santander-dev-week.png "Image Santander Dev Week")
 
 ## Configuração
 
 * Ao clonar o projeto configure corretamente o arquivo **application.yml**, com o Driver do banco de sua preferência e usúario e senha corretos.
 * Caso encontre erro no start da aplicação, por favor crie o schema/banco dt_santander antes.
+* Projeto pré-configurado na porta: 8080
+* Swagger - OpenAPI: http://localhost:8080/bootcamp/swagger-ui.html
 
 
 ## Construção do Projeto
@@ -106,7 +109,7 @@
   ```
 
 ## Proprietário
-* Guilherme Ribeiro - Guirilima
+* Guilherme Ribeiro - Guirilima - https://github.com/Guirilima
 
 
 ----
