@@ -1,6 +1,8 @@
 spring:
   datasource:
     url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
   jpa:
     show-sql: true
     generate-ddl: true
@@ -10,6 +12,3 @@ spring:
 project:
   version: @project.version@
   name: @project.name@
-
-#@Value("${project.version}")
-#private String projectVersion;

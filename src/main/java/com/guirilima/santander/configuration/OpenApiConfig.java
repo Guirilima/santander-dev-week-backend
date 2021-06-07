@@ -4,6 +4,7 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.info.BuildProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,19 +12,25 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class OpenApiConfig {
 
-    private final BuildProperties buildProperties;
+//    private final BuildProperties buildProperties;
+//
+//    @Autowired
+//    public OpenApiConfig (BuildProperties buildProperties) {
+//        this.buildProperties = buildProperties;
+//    }
 
-    @Autowired
-    public OpenApiConfig (BuildProperties buildProperties) {
-        this.buildProperties = buildProperties;
-    }
+    @Value("${project.version}")
+    private String projectVersion;
+
+    @Value("${project.name}")
+    private String projectName;
 
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI().info(
                 new Info()
-                    .title(buildProperties.getName() + " - Guirilima")
-                    .version(buildProperties.getVersion())
+                    .title(projectName + " - Guirilima")
+                    .version(projectVersion)
                     .termsOfService("http://swagger.io/terms")
                     .license(
                             new License()

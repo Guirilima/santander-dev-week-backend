@@ -10,9 +10,10 @@ spring:
     password: root123
   jpa:
     show-sql: true
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
 
 project:
   version: @project.version@
